@@ -51,9 +51,9 @@ int main(int argc, char **argv) {
     // lower n to the nearest multiple of 3.
     long n = (n_arg/3)*3;   
 
-    long sum_fibs_up_to_limit = getFib(n + 2) - 1;        
+    long sum = getFib(n + 2) - 1;        
 
-    printf("sum of all even fibs up to that limit is: %ld\n", sum_fibs_up_to_limit/2);        
+    printf("sum of the first %ld even fibonacci terms is: %ld\n", n_arg, sum/2);        
     
     return 0;
 }
