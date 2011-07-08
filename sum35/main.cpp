@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <cstdlib>
 
-
 /*
     Problem no. 1:
     If we list all the natural numbers below 10 that are multiples 
@@ -18,10 +17,12 @@ int main(int argc, char **argv) {
     }
 
     int target = atoi(argv[1]);
-    printf("first try:\n");
-    int d5 = (target%5 == 0)?target/5 - 1:target/5;
-    int d3 = (target%3 == 0)?target/3 - 1:target/3;
-    int d15 = (target%15 == 0)?target/15 - 1:target/15;
+    
+    // d5 is the number of all integers < target, which are
+    // multiples of 5
+    int d5 = (target-1)/5;
+    int d3 = (target-1)/3;
+    int d15 = (target-1)/15;
 
     int sum = d5*(d5+1)*5/2 + d3*(d3 + 1)*3/2 - d15*(d15+1)*15/2;
 
